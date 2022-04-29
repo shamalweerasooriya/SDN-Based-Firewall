@@ -34,7 +34,7 @@ def unblock(srcIp, dstIp):
 
 def launch(ips = ''):
     # add blocks from CLI
-    blocked_ips.append((ip[0], ip[1]) for ip in ips.split(','))
+    blocked_ips.append((ip[0], ip[1]) for ip in ips.split(' '))
 
     # add or remove rules when running POX with py
     core.Interactive.variables['block'] = block
