@@ -36,3 +36,22 @@ $ cd pox
 ```
 
 POX is implemented to run well on PyPy. Download the latest PyPy tarball from [here](https://www.pypy.org/download.html). Decompress the tarball onto a directory named pypy inside the pox directory.
+
+## Instructions
+
+Save the firewall.py file in the pox/ext directory.
+
+specify the pair of ip addresses (srcip,dstip) on the command line
+```
+$ ./pox.py forwarding.l2_learning firewall --ips=(10.1.1.2,10.1.1.3) (10.1.1.4,10.1.1.5)
+```
+
+Alternatively, if you run with the "py" component, you can use the CLI:
+```
+$ ./pox.py forwarding.l2_learning firewall py
+POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
+INFO:core:POX 0.7.0 (gar) is up.
+Ready.
+POX> block(10.1.1.6,10.1.1.7)
+POX> unblock(10.1.1.2,10.1.1.3)
+```
