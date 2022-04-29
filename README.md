@@ -24,4 +24,15 @@ Organizations typically have a gateway router connecting to its ISP provider. Pa
 
 Firewall rules are implemented using access control lists (similar to the one shown above). Rukes are applied to each datagram from top to bottom.
 
-## Initialization (To be Ctd ...)
+## Initialization
+
+### POX Installation
+
+The controller is implemented using the POX framework. Following are the commands to install POX.
+
+```
+$ git clone http://github.com/noxrepo/pox
+$ cd pox
+```
+
+POX is implemented to run well on PyPy. Download the latest PyPy tarball from [here](https://www.pypy.org/download.html). Decompress the tarball onto a directory named pypy inside the pox directory.
